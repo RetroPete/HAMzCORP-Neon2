@@ -31,43 +31,4 @@ public class BeamController : MonoBehaviour
 		Destroy(GameObject.Find("drone_fence_purple(Clone)"), destroyTime);
 		Destroy(GameObject.Find("drone_fence_red(Clone)"), destroyTime);
     }
-	
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.name == "Shield")
-		{
-			Destroy(GameObject.Find("beam_blue"));
-		}
-		else if (other.gameObject.name == "Player")
-		{
-			SceneManager.LoadScene("Level_1");
-		}
-		
-		if (other.gameObject.name == "Shield")
-		{
-			Destroy(GameObject.Find("beam_green"));
-		}
-		else if (other.gameObject.name == "Player")
-		{
-			SceneManager.LoadScene("Level_1");
-		}
-		
-		if (other.gameObject.name == "Shield")
-		{
-			Destroy(GameObject.Find("beam_purple"));
-		}
-		else if (other.gameObject.name == "Player")
-		{
-			SceneManager.LoadScene("Level_1");
-		}
-		
-		if (other.gameObject.name == "Shield")
-		{
-			Destroy(GameObject.Find("beam_red"));
-		}
-		else if (other.gameObject.name == "Player")
-		{
-			SceneManager.LoadScene("Level_1");
-		}
-	}	
 }

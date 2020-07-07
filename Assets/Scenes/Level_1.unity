@@ -121,6 +121,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &361494378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7629026956380491017, guid: 67a27e9fc341cff4f8f9bbff2c04a48a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1591634345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &361494384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361494378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6872cc3ccceb3b41b58df34db7a4117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &367591740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,6 +1563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 843518700}
   shield: {fileID: 1201893666}
+  playerEnergy: {fileID: 843518707}
   anim: {fileID: 1201893669}
 --- !u!95 &1201893669
 Animator:
@@ -1625,7 +1644,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.013359834, y: 0}
@@ -2038,6 +2057,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579189797098392521, guid: 67a27e9fc341cff4f8f9bbff2c04a48a,
+        type: 3}
+      propertyPath: regen
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2140406092375187130, guid: 67a27e9fc341cff4f8f9bbff2c04a48a,
         type: 3}
@@ -3434,7 +3458,7 @@ PrefabInstance:
     - target: {fileID: 6552087067498460999, guid: 16849b4971d194e4f903b69e7c9e5b1c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16849b4971d194e4f903b69e7c9e5b1c, type: 3}

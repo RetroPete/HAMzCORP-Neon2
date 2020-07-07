@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 9076269028771142745}
   - component: {fileID: 8588558076678924080}
   - component: {fileID: 7449874156446839463}
+  - component: {fileID: -708427188055962784}
   m_Layer: 0
   m_Name: drone_fence_purple
   m_TagString: Untagged
@@ -315,4 +316,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   destroyTime: 6
+  regen: 0
   beam: {fileID: 7753899975724305637}
+--- !u!114 &-708427188055962784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7753899975724305637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6872cc3ccceb3b41b58df34db7a4117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentEnergy: 0

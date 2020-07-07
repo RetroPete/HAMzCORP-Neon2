@@ -28,7 +28,7 @@ public class BeamSpawn : MonoBehaviour
         transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
 
-    private void spawnEnemy()
+    private void spawnBeam()
     {
         beams = new GameObject[beamPrefabs.Length];
 		
@@ -44,7 +44,7 @@ public class BeamSpawn : MonoBehaviour
         while(true)
 		{
             yield return new WaitForSeconds(respawnTime);
-            spawnEnemy();
+            spawnBeam();
         }
     }
 }

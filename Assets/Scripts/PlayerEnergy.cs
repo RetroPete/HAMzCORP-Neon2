@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerEnergy : MonoBehaviour
@@ -28,18 +29,29 @@ public class PlayerEnergy : MonoBehaviour
 		
 		if (Input.GetKey(KeyCode.D))
 		{
-			TakeEnergy(2);
+			TakeEnergy(1);
 		}
     }
 	
-	void TakeEnergy(int energy)
+	public void GiveEnergy(int regen)
 	{
-		currentEnergy -= energy;
+		currentEnergy += regen;
+		
+		energyBar.SetEnergy(currentEnergy);
+		
+		if (currentEnergy > maxEnergy)
+			currentEnergy = maxEnergy;
+	}
+	
+	public void TakeEnergy(int deplete)
+	{
+		currentEnergy -= deplete;
 		
 		energyBar.SetEnergy(currentEnergy);
 		
 		if (currentEnergy <= 0)
 		{
+			currentEnergy = 0;
 			Die();
 		}	
 	}
