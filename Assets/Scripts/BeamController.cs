@@ -26,11 +26,6 @@ public class BeamController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Destroy(GameObject.Find("beam_blue(Clone)"), destroyTime);
-		//Destroy(GameObject.Find("beam_green(Clone)"), destroyTime);		
-		//Destroy(GameObject.Find("beam_purple(Clone)"), destroyTime);
-		//Destroy(GameObject.Find("beam_red(Clone)"), destroyTime);
-		
 		Destroy(GameObject.Find("drone_fence_blue(Clone)"), destroyTime);
 		Destroy(GameObject.Find("drone_fence_green(Clone)"), destroyTime);		
 		Destroy(GameObject.Find("drone_fence_purple(Clone)"), destroyTime);
@@ -41,7 +36,6 @@ public class BeamController : MonoBehaviour
 	{
 		if (other.gameObject.name == "Shield")
 		{
-			//Destroy(GameObject.Find("beam_blue(Clone)"));
 			Destroy(GameObject.Find("beam_blue"));
 		}
 		else if (other.gameObject.name == "Player")
@@ -51,7 +45,6 @@ public class BeamController : MonoBehaviour
 		
 		if (other.gameObject.name == "Shield")
 		{
-			//Destroy(GameObject.Find("beam_green(Clone)"));
 			Destroy(GameObject.Find("beam_green"));
 		}
 		else if (other.gameObject.name == "Player")
@@ -61,7 +54,6 @@ public class BeamController : MonoBehaviour
 		
 		if (other.gameObject.name == "Shield")
 		{
-			//Destroy(GameObject.Find("beam_purple(Clone)"));
 			Destroy(GameObject.Find("beam_purple"));
 		}
 		else if (other.gameObject.name == "Player")
@@ -71,7 +63,6 @@ public class BeamController : MonoBehaviour
 		
 		if (other.gameObject.name == "Shield")
 		{
-			//Destroy(GameObject.Find("beam_red(Clone)"));
 			Destroy(GameObject.Find("beam_red"));
 		}
 		else if (other.gameObject.name == "Player")

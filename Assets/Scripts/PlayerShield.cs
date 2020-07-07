@@ -24,17 +24,17 @@ public class PlayerShield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {	
-		if (Input.GetKeyDown(KeyCode.E))
+		if (Input.GetKeyDown(KeyCode.Keypad5))
         {
 			shieldOn.enabled = true;
 			anim.Play("player_shield_active");
         }
-		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.E) && Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.E))
+		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Keypad5) && Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.Keypad5))
 		{
 			shieldOn.enabled = false;
 			anim.Play("player_shield_idle");
 		}
-		if (Input.GetKeyUp(KeyCode.E))
+		if (Input.GetKeyUp(KeyCode.Keypad5))
 		{
 			shieldOn.enabled = false;
 			anim.Play("player_shield_idle");
