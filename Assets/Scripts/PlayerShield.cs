@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerShield : MonoBehaviour
 {
@@ -9,8 +10,6 @@ public class PlayerShield : MonoBehaviour
 	public GameObject shield;
 	
 	private CircleCollider2D shieldOn;
-	
-	public PlayerEnergy playerEnergy;
 	
 	public Animator anim;
 	
@@ -44,8 +43,8 @@ public class PlayerShield : MonoBehaviour
         }
     }
 	
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D col)
 	{
-		Debug.Log(other.name);
+		Debug.Log(col.tag);
 	}	
 }

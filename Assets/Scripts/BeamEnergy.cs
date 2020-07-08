@@ -18,13 +18,13 @@ public class BeamEnergy : MonoBehaviour
         
     }
 	
-	void OnTriggerEnter2D(Collider2D hitInfo)
+	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (hitInfo.gameObject.name == "Shield")
+		if (col.gameObject.tag == "Shield")
 		{
 			Destroy();
 		}
-		else if (hitInfo.gameObject.name == "Player")
+		else if (col.gameObject.tag == "Player")
 		{
 			SceneManager.LoadScene("Level_1");
 		}

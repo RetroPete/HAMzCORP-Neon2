@@ -31,6 +31,11 @@ public class PlayerEnergy : MonoBehaviour
 		{
 			TakeEnergy(1);
 		}
+		
+		if (Input.GetKey(KeyCode.Keypad8))
+		{
+			GiveEnergy(2);
+		}
     }
 	
 	public void GiveEnergy(int regen)
