@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         pos.y = Mathf.Clamp01(pos.y);
         transform.position = Camera.main.ViewportToWorldPoint(pos);
 
-		anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));		
+		anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
     }
 	
 	void FixedUpdate()
