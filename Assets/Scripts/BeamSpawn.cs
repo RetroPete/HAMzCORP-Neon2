@@ -10,6 +10,7 @@ public class BeamSpawn : MonoBehaviour
 	public GameObject[] beamPrefabs;
 	
 	private GameObject[] beams;
+	
 	private Vector3 offset;
 	
     // Start is called before the first frame update

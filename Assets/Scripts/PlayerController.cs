@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 	private LevelManager theLevelManager;
 	
 	private Animator anim;
+	
 	private Rigidbody2D rb;
 	
 	// Start is called before the first frame update

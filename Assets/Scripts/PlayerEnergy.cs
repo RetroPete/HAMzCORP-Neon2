@@ -22,19 +22,9 @@ public class PlayerEnergy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Keypad5))
-		{
-			TakeEnergy(1);
-		}
-		
 		if (Input.GetKey(KeyCode.D))
 		{
 			TakeEnergy(1);
-		}
-		
-		if (Input.GetKey(KeyCode.Keypad8))
-		{
-			GiveEnergy(2);
 		}
     }
 	
@@ -64,5 +54,13 @@ public class PlayerEnergy : MonoBehaviour
 	void Die()
 	{
 		SceneManager.LoadScene("Level_1");
+	}
+	
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.gameObject.tag == "Beam")
+		{
+			GiveEnergy(75);
+		}
 	}
 }

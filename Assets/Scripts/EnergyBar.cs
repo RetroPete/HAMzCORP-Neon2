@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class EnergyBar : MonoBehaviour
 {
 	public Slider slider;
+	
 	public Gradient gradient;
+	
 	public Image fill;
 	
     public void SetMaxEnergy(int energy)

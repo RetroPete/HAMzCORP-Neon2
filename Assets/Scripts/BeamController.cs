@@ -10,9 +10,8 @@ public class BeamController : MonoBehaviour
 	
 	public GameObject beam;
 	
-	//public LevelManager theLevelManager;
+	private Rigidbody2D rb;
 	
-    private Rigidbody2D rb;
     private Vector2 screenBounds;
 	
     // Start is called before the first frame update

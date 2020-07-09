@@ -1334,7 +1334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1028320254
 Transform:
   m_ObjectHideFlags: 0
@@ -1527,7 +1527,7 @@ GameObject:
   - component: {fileID: 1201893670}
   - component: {fileID: 1201893671}
   - component: {fileID: 1201893669}
-  - component: {fileID: 1201893668}
+  - component: {fileID: 1201893672}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Shield
@@ -1543,27 +1543,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201893666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 0, z: 0}
+  m_LocalPosition: {x: 0.1, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 843518704}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1201893668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201893666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820c18be17a60da4198573dd7d459c31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 843518700}
-  shield: {fileID: 1201893666}
-  anim: {fileID: 1201893669}
 --- !u!95 &1201893669
 Animator:
   serializedVersion: 3
@@ -1646,9 +1631,23 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: 0}
+  m_Offset: {x: 0.2, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &1201893672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201893666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b0cd5276b65874991f0d091685de6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1201893669}
+  player: {fileID: 843518700}
 --- !u!1 &1248954389
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,10 +3128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitToRespawn: 2
-  player: {fileID: 843518701}
-  score: {fileID: 1132093518}
   scoreCount: 0
   respawnCoActive: 0
+  player: {fileID: 843518701}
+  score: {fileID: 1132093518}
 --- !u!4 &2034887691
 Transform:
   m_ObjectHideFlags: 0
@@ -3477,7 +3476,7 @@ PrefabInstance:
     - target: {fileID: 6552087067498460999, guid: 16849b4971d194e4f903b69e7c9e5b1c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6552087067498460999, guid: 16849b4971d194e4f903b69e7c9e5b1c,
         type: 3}

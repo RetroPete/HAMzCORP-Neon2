@@ -7,13 +7,13 @@ public class LevelManager : MonoBehaviour
 {
 	public float waitToRespawn;
 	
+	public int scoreCount;
+	
+	public bool respawnCoActive;
+	
 	public PlayerController player;
 	
 	public Text score;
-	
-	public int scoreCount;
-
-	public bool respawnCoActive;
 	
     // Start is called before the first frame update
     void Start()
