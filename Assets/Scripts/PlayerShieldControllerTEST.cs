@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerShieldTEST : MonoBehaviour
+public class PlayerShieldControllerTEST : MonoBehaviour
 {
 	public GameObject player;
 	public GameObject shield;

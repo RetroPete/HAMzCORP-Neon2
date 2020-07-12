@@ -47,5 +47,7 @@ public class PlayerShieldController : MonoBehaviour
 		GetComponent<CircleCollider2D>().enabled = false;
 		
 		anim.Play("player_shield_idle");
+		
+		yield return new WaitForSeconds(.1f);
 	}
 }
