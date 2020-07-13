@@ -8,6 +8,9 @@ public class PlayerShieldController : MonoBehaviour
 	
 	public GameObject player;
 	
+	public float timer = 0;
+	public float waitingTime = 2.2f;
+	
 	
 	// Start is called before the first frame update
     private void Start()
@@ -20,16 +23,22 @@ public class PlayerShieldController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		timer += Time.deltaTime;
+		
         if (Input.GetKeyDown(KeyCode.Keypad5))
         {
-			StartCoroutine(ShieldOn());
+			if(timer > waitingTime)
+			{
+			  timer = 0;
+			  StartCoroutine(ShieldOn());
+			}
         }
 		
-		if (Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.Keypad5) && Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKey(KeyCode.D))
-		{
-			GetComponent<CircleCollider2D>().enabled = false;
-			anim.Play("player_shield_idle");
-		}
+		//if (Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.Keypad5) && Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKey(KeyCode.D))
+		//{
+		//	GetComponent<CircleCollider2D>().enabled = false;
+		//	anim.Play("player_shield_idle");
+		//}
     }
 	
 	IEnumerator ShieldOn()
