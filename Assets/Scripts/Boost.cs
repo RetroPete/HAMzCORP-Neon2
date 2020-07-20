@@ -22,6 +22,7 @@ public class Boost : MonoBehaviour
         {
 			anim.Play("player_boost");
         }
+		
 		if (Input.GetKeyUp(KeyCode.D))
 		{
             anim.Play("player_boost_idle");
