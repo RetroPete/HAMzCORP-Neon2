@@ -37,25 +37,25 @@ public class PlayerControllerTEST : MonoBehaviour
 	// Update is called once per frame
     void Update()
     {
-		//if (Input.GetKey(KeyCode.W))
-		//{
-		//	transform.Translate(new Vector3(0, .5f, 0) * autoMove * Time.deltaTime);
-		//}
+		if (Input.GetKey(KeyCode.W))
+		{
+			transform.Translate(new Vector3(0, .5f, 0) * autoMove * Time.deltaTime);
+		}
 		
-		//if (Input.GetKey(KeyCode.S))
-		//{
-		//	transform.Translate(new Vector3(0, -.5f, 0) * autoMove * Time.deltaTime);
-		//}
+		if (Input.GetKey(KeyCode.S))
+		{
+			transform.Translate(new Vector3(0, -.5f, 0) * autoMove * Time.deltaTime);
+		}
 		
-		//if (Input.GetKeyDown(KeyCode.D) || Input.GetButtonDown("Boost"))
-        //{
-		//	horizontal = 1;
-        //}
+		if (Input.GetKeyDown(KeyCode.D))
+        {
+			horizontal = 1;
+        }
 		
-		//if (Input.GetKeyUp(KeyCode.D))
-		//{
-		//	horizontal = 0;
-        //}
+		if (Input.GetKeyUp(KeyCode.D))
+		{
+			horizontal = 0;
+        }
 		
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
@@ -75,38 +75,6 @@ public class PlayerControllerTEST : MonoBehaviour
 
 		anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
     }
-	
-	public void Up()
-	{
-		if (Input.GetKey(KeyCode.W))
-		{
-			transform.Translate(new Vector3(0, .5f, 0) * autoMove * Time.deltaTime);
-		}
-	}
-	
-	public void Down()
-	{
-		if (Input.GetKey(KeyCode.S))
-		{
-			transform.Translate(new Vector3(0, -.5f, 0) * autoMove * Time.deltaTime);
-		}
-	}
-	
-	public void BoostOn()
-	{
-		if (Input.GetKeyDown(KeyCode.D) || Input.GetButtonDown("boostButton"))
-        {
-			horizontal = 1;
-        }
-	}
-	
-	public void BoostOff()
-	{
-		if (Input.GetKeyUp(KeyCode.D) || Input.GetButtonUp("boostButton"))
-		{
-			horizontal = 0;
-        }
-	}
 	
 	void FixedUpdate()
 	{
