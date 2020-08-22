@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-	float horizontal;
-    float vertical;
+	private float horizontal = 0;
+    private float vertical = 0;
 	
 	public float boostSpeed;
 	public float autoMove;
 	
 	public GameObject player;
+	public GameObject boostButton;
+	
 	
 	private Rigidbody2D rb;
 	
@@ -33,26 +38,34 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
     void Update()
     {
-		if (Input.GetAxisRaw("Horizontal") >=0)
+		if (Input.GetKey(KeyCode.W))
 		{
-			horizontal = Input.GetAxisRaw("Horizontal");
-			vertical = Input.GetAxisRaw("Vertical");
+			transform.Translate(new Vector3(0, .5f, 0) * autoMove * Time.deltaTime);
 		}
+		
+		if (Input.GetKey(KeyCode.S))
+		{
+			transform.Translate(new Vector3(0, -.5f, 0) * autoMove * Time.deltaTime);
+		}
+		
+		if (Input.GetKeyDown(KeyCode.D))
+        {
+			horizontal = 1;
+        }
+		
+		if (Input.GetKeyUp(KeyCode.D))
+		{
+			horizontal = 0;
+        }
 		
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
 			StartCoroutine(RollUp());
-			//transform.Translate(new Vector3(0, 10, 0) * autoMove * Time.deltaTime);
-			//player.GetComponent<PlayerEnergy>().TakeEnergy(100);
-			//anim.Play("player_roll_up"); 
 		}
 		
 		if (Input.GetKeyDown(KeyCode.E))
 		{
 			StartCoroutine(RollDown());
-			//transform.Translate(new Vector3(0, -10, 0) * autoMove * Time.deltaTime);
-			//player.GetComponent<PlayerEnergy>().TakeEnergy(100);
-			//anim.Play("player_roll_down"); 
 		}
 		
 		
@@ -73,7 +86,7 @@ public class PlayerController : MonoBehaviour
 	{
 		yield return new WaitForSeconds(.2f);
 		
-		transform.Translate(new Vector3(0, 10, 0) * autoMove * Time.deltaTime);
+		transform.Translate(new Vector3(0, 30, 0) * autoMove * Time.deltaTime);
 		
 		player.GetComponent<PlayerEnergy>().TakeEnergy(100);
 		
@@ -84,7 +97,7 @@ public class PlayerController : MonoBehaviour
 	{
 		yield return new WaitForSeconds(.2f);
 		
-		transform.Translate(new Vector3(0, -10, 0) * autoMove * Time.deltaTime);
+		transform.Translate(new Vector3(0, -30, 0) * autoMove * Time.deltaTime);
 		
 		player.GetComponent<PlayerEnergy>().TakeEnergy(100);
 		
