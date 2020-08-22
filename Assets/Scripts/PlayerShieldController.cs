@@ -14,11 +14,8 @@ public class PlayerShieldController : MonoBehaviour
 	public float timer = 0;
 	public float waitingTime = 2.2f;
 	
-	//public GameObject player;
+
 	//public GameObject shield;
-	
-	//public Animator anim;
-	
 	//private CircleCollider2D shieldOn;
 	
 	
@@ -30,15 +27,24 @@ public class PlayerShieldController : MonoBehaviour
 		player.GetComponent<PlayerEnergy>();
 		
 		//shieldOn = GetComponent<CircleCollider2D>();
-		
 		//shieldOn.enabled = false;
-		
         //anim = GetComponent<Animator>();
 	}
 
     // Update is called once per frame
-	//void Update()
-    //{	
+	void Update()
+    {	
+		timer += Time.deltaTime;
+		
+        if (Input.GetKeyDown(KeyCode.Keypad5))
+        {
+			if(timer > waitingTime)
+			{
+			  timer = 0;
+			  StartCoroutine(ShieldOn());
+			}
+        }
+		
 		//if (Input.GetKey(KeyCode.Keypad5))
         //{
 		//	shieldOn.enabled = true;
@@ -54,21 +60,6 @@ public class PlayerShieldController : MonoBehaviour
 		//	shieldOn.enabled = false;
 		//	anim.Play("player_shield_idle");
 		//}
-    //}
-	
-    public void shieldy()
-    {
-		timer += Time.deltaTime;
-		
-        if (Input.GetKeyDown(KeyCode.Keypad5))
-        {
-			if(timer > waitingTime)
-			{
-			  timer = 0;
-			  StartCoroutine(ShieldOn());
-			}
-        }
-		
 		//if (Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.Keypad5) && Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKey(KeyCode.D))
 		//{
 		//	GetComponent<CircleCollider2D>().enabled = false;
