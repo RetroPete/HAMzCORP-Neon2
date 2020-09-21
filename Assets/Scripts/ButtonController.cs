@@ -13,17 +13,17 @@ public class ButtonController : MonoBehaviour
     void Start()
 	
 	{
-         player = GameObject.FindWithTag ("Player");
-     }
-	
-    //{
-    //    player.GetComponent<PlayerController>();
-    //}
+         //player = GameObject.FindWithTag ("Player");
+		 
+		 player.GetComponent<PlayerController>();
+		 
+		 player.GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+		
 		if (Input.GetKey(KeyCode.W))
 		{
 			transform.Translate(new Vector3(0, .5f, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
@@ -31,7 +31,7 @@ public class ButtonController : MonoBehaviour
 		
 		if (Input.GetKey(KeyCode.S))
 		{
-			player.GetComponent<PlayerController>().transform.Translate(new Vector3(0, -.5f, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
+			transform.Translate(new Vector3(0, -.5f, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
 		}
 		
 		if (Input.GetKeyDown(KeyCode.D))
@@ -57,17 +57,24 @@ public class ButtonController : MonoBehaviour
 	
 	public void Idle()
 	{
-		transform.Translate(new Vector3(0, 0, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
+		player.GetComponent<PlayerController>().vertical = 0;
+		player.GetComponent<Animator>().SetInteger("Idle", 0);
+		//transform.Translate(new Vector3(0, 0, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
+		
 	}
 	
 	public void MoveUp()
 	{
-		transform.Translate(Vector3.up * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
+		player.GetComponent<PlayerController>().vertical = 5;
+		player.GetComponent<Animator>().SetInteger("Up", 1);
+		//transform.Translate(new Vector3(0, 5, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
 	}
 		
 	public void MoveDown()
 	{
-		transform.Translate(new Vector3(0, -.5f, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
+		player.GetComponent<PlayerController>().vertical = -5;
+		player.GetComponent<Animator>().SetInteger("Down", -1);
+		//transform.Translate(new Vector3(0, -5, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
 	}
 		
 	public void BoostOn()
@@ -78,5 +85,15 @@ public class ButtonController : MonoBehaviour
 	public void BoostOff()
 	{
 		player.GetComponent<PlayerController>().horizontal = 0;
+    }
+	
+	public void MoveUpUp()
+	{
+		//player.GetComponent<PlayerController>().StartCoroutine(RollUp());
+    }
+	
+	public void MoveDownDown()
+	{
+		//player.GetComponent<PlayerController>().StartCoroutine(RollDown());
     }
 }
