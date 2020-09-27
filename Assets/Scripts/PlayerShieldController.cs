@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class PlayerShieldController : MonoBehaviour
 {
-	public Animator anim;
-	
 	public GameObject player;
 	
 	public float timer = 0;
 	public float waitingTime = 2.2f;
+	
+	private Animator anim;
 	
 
 	//public GameObject shield;
@@ -28,7 +28,7 @@ public class PlayerShieldController : MonoBehaviour
 		
 		//shieldOn = GetComponent<CircleCollider2D>();
 		//shieldOn.enabled = false;
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
 	}
 
     // Update is called once per frame

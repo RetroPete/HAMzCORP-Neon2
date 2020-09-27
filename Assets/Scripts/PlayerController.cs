@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour
 	public float autoMove;
 	
 	public GameObject player;
-	public GameObject boostButton;
-	
 	
 	private Rigidbody2D rb;
 	
@@ -45,6 +43,36 @@ public class PlayerController : MonoBehaviour
         transform.position = Camera.main.ViewportToWorldPoint(pos);
 
 		anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
+		
+		if (Input.GetKey(KeyCode.W))
+		{
+			transform.Translate(new Vector3(0, .5f, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
+		}
+		
+		if (Input.GetKey(KeyCode.S))
+		{
+			transform.Translate(new Vector3(0, -.5f, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
+		}
+		
+		if (Input.GetKeyDown(KeyCode.D))
+        {
+			player.GetComponent<PlayerController>().horizontal = 1;
+        }
+		
+		if (Input.GetKeyUp(KeyCode.D))
+		{
+			player.GetComponent<PlayerController>().horizontal = 0;
+        }
+		
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			player.GetComponent<PlayerController>().StartCoroutine(RollUp());
+		}
+		
+		if (Input.GetKeyDown(KeyCode.E))
+		{
+			player.GetComponent<PlayerController>().StartCoroutine(RollDown());
+		}
     }
 	
 	void FixedUpdate()
@@ -56,7 +84,7 @@ public class PlayerController : MonoBehaviour
 	{
 		yield return new WaitForSeconds(.2f);
 		
-		transform.Translate(new Vector3(0, 30, 0) * autoMove * Time.deltaTime);
+		transform.Translate(new Vector3(0, 15f, 0) * autoMove * Time.deltaTime);
 		
 		player.GetComponent<PlayerEnergy>().TakeEnergy(100);
 		
@@ -67,7 +95,7 @@ public class PlayerController : MonoBehaviour
 	{
 		yield return new WaitForSeconds(.2f);
 		
-		transform.Translate(new Vector3(0, -30, 0) * autoMove * Time.deltaTime);
+		transform.Translate(new Vector3(0, -15f, 0) * autoMove * Time.deltaTime);
 		
 		player.GetComponent<PlayerEnergy>().TakeEnergy(100);
 		
