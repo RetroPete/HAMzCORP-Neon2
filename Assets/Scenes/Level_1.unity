@@ -1960,7 +1960,7 @@ MonoBehaviour:
   horizontal: 0
   vertical: 0
   boostSpeed: 15
-  autoMove: 10
+  autoMove: 15
   player: {fileID: 843518700}
 --- !u!50 &843518702
 Rigidbody2D:
@@ -2396,7 +2396,7 @@ RectTransform:
   m_GameObject: {fileID: 907917547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.4, z: 1}
   m_Children:
   - {fileID: 1423967974}
   - {fileID: 1848655413}
@@ -2406,7 +2406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -298, y: -143}
+  m_AnchoredPosition: {x: -141, y: -50}
   m_SizeDelta: {x: 463.55786, y: 33.538383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907917549
@@ -2995,8 +2995,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 435, y: -113}
-  m_SizeDelta: {x: 778.9708, y: 148.47363}
+  m_AnchoredPosition: {x: 148, y: -48}
+  m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132093518
 MonoBehaviour:
@@ -3019,7 +3019,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2866fee361232b34bae5b38618517e4f, type: 3}
-    m_FontSize: 72
+    m_FontSize: 50
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 0
@@ -3030,7 +3030,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: ' Score: 0'
 --- !u!222 &1132093519
 CanvasRenderer:
   m_ObjectHideFlags: 0

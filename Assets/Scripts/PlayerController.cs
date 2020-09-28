@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 	
 	public float boostSpeed;
 	public float autoMove;
+	//public float rollSpeed;
 	
 	public GameObject player;
 	
@@ -46,33 +47,33 @@ public class PlayerController : MonoBehaviour
 		
 		if (Input.GetKey(KeyCode.W))
 		{
-			transform.Translate(new Vector3(0, .5f, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
+			transform.Translate(new Vector3(0, .5f, 0) * autoMove * Time.deltaTime);
 		}
 		
 		if (Input.GetKey(KeyCode.S))
 		{
-			transform.Translate(new Vector3(0, -.5f, 0) * player.GetComponent<PlayerController>().autoMove * Time.deltaTime);
+			transform.Translate(new Vector3(0, -.5f, 0) * autoMove * Time.deltaTime);
 		}
 		
 		if (Input.GetKeyDown(KeyCode.D))
         {
-			player.GetComponent<PlayerController>().horizontal = 1;
+			horizontal = 1;
         }
 		
 		if (Input.GetKeyUp(KeyCode.D))
 		{
-			player.GetComponent<PlayerController>().horizontal = 0;
+			horizontal = 0;
         }
 		
-		if (Input.GetKeyDown(KeyCode.Q))
-		{
-			player.GetComponent<PlayerController>().StartCoroutine(RollUp());
-		}
+		//if (Input.GetKeyDown(KeyCode.Q))
+		//{
+		//	StartCoroutine(RollUp());
+		//}
 		
-		if (Input.GetKeyDown(KeyCode.E))
-		{
-			player.GetComponent<PlayerController>().StartCoroutine(RollDown());
-		}
+		//if (Input.GetKeyDown(KeyCode.E))
+		//{
+		//	StartCoroutine(RollDown());
+		//}
     }
 	
 	void FixedUpdate()
@@ -80,25 +81,25 @@ public class PlayerController : MonoBehaviour
 		rb.velocity = new Vector2(autoMove + horizontal * boostSpeed, vertical);
 	}
 	
-	IEnumerator RollUp()
-	{
-		yield return new WaitForSeconds(.2f);
-		
-		transform.Translate(new Vector3(0, 15f, 0) * autoMove * Time.deltaTime);
-		
-		player.GetComponent<PlayerEnergy>().TakeEnergy(100);
-		
-		anim.Play("player_roll_up"); 
-	}
+	//IEnumerator RollUp()
+	//{
+	//	yield return new WaitForSeconds(.2f);
+	//	
+	//	transform.Translate(new Vector3(0, 30f, 0) * rollSpeed * Time.deltaTime);
+	//	
+	//	player.GetComponent<PlayerEnergy>().TakeEnergy(100);
+	//	
+	//	anim.Play("player_roll_up"); 
+	//}
 	
-	IEnumerator RollDown()
-	{
-		yield return new WaitForSeconds(.2f);
-		
-		transform.Translate(new Vector3(0, -15f, 0) * autoMove * Time.deltaTime);
-		
-		player.GetComponent<PlayerEnergy>().TakeEnergy(100);
-		
-		anim.Play("player_roll_down");
-	}
+	//IEnumerator RollDown()
+	//{
+	//	yield return new WaitForSeconds(.2f);
+	//	
+	//	transform.Translate(new Vector3(0, -30, 0) * rollSpeed * Time.deltaTime);
+	//	
+	//	player.GetComponent<PlayerEnergy>().TakeEnergy(100);
+	//	
+	//	anim.Play("player_roll_down");
+	//}
 }
