@@ -9,12 +9,10 @@ public class BeamController : MonoBehaviour
 {
 	public float speed = 1f;
 	public float destroyTime = 6f;
-	
 	public GameObject beam;
 	
 	private Rigidbody2D rb;
-	
-    private Vector2 screenBounds;
+	private Vector2 screenBounds;
 	
     // Start is called before the first frame update
     void Start()

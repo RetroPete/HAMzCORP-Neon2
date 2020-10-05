@@ -9,17 +9,12 @@ public class PlayerController : MonoBehaviour
 {
 	public float horizontal;
     public float vertical;
-	
 	public float boostSpeed;
 	public float autoMove;
-	//public float rollSpeed;
-	
 	public GameObject player;
 	
 	private Rigidbody2D rb;
-	
 	private Animator anim;
-	
 	private LevelManager theLevelManager;
 	
 	// Start is called before the first frame update
@@ -64,42 +59,10 @@ public class PlayerController : MonoBehaviour
 		{
 			horizontal = 0;
         }
-		
-		//if (Input.GetKeyDown(KeyCode.Q))
-		//{
-		//	StartCoroutine(RollUp());
-		//}
-		
-		//if (Input.GetKeyDown(KeyCode.E))
-		//{
-		//	StartCoroutine(RollDown());
-		//}
     }
 	
 	void FixedUpdate()
 	{
 		rb.velocity = new Vector2(autoMove + horizontal * boostSpeed, vertical);
 	}
-	
-	//IEnumerator RollUp()
-	//{
-	//	yield return new WaitForSeconds(.2f);
-	//	
-	//	transform.Translate(new Vector3(0, 30f, 0) * rollSpeed * Time.deltaTime);
-	//	
-	//	player.GetComponent<PlayerEnergy>().TakeEnergy(100);
-	//	
-	//	anim.Play("player_roll_up"); 
-	//}
-	
-	//IEnumerator RollDown()
-	//{
-	//	yield return new WaitForSeconds(.2f);
-	//	
-	//	transform.Translate(new Vector3(0, -30, 0) * rollSpeed * Time.deltaTime);
-	//	
-	//	player.GetComponent<PlayerEnergy>().TakeEnergy(100);
-	//	
-	//	anim.Play("player_roll_down");
-	//}
 }

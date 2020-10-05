@@ -9,7 +9,6 @@ public class Boost : MonoBehaviour
 {
     public GameObject player;
 	public GameObject booster;
-	
 	public Animator anim;
 	
     // Start is called before the first frame update

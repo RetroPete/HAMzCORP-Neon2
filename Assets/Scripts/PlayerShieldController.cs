@@ -8,16 +8,10 @@ using UnityEngine.UI;
 public class PlayerShieldController : MonoBehaviour
 {
 	public GameObject player;
-	
 	public float timer = 0;
 	public float waitingTime = 2.2f;
 	
 	private Animator anim;
-	
-
-	//public GameObject shield;
-	//private CircleCollider2D shieldOn;
-	
 	
 	// Start is called before the first frame update
     void Start()
@@ -26,8 +20,6 @@ public class PlayerShieldController : MonoBehaviour
 		
 		player.GetComponent<PlayerEnergy>();
 		
-		//shieldOn = GetComponent<CircleCollider2D>();
-		//shieldOn.enabled = false;
         anim = GetComponent<Animator>();
 	}
 
@@ -44,27 +36,6 @@ public class PlayerShieldController : MonoBehaviour
 			  StartCoroutine(ShieldOn());
 			}
         }
-		
-		//if (Input.GetKey(KeyCode.Keypad5))
-        //{
-		//	shieldOn.enabled = true;
-		//	anim.Play("player_shield_active");
-        //}
-		//if (Input.GetKeyUp(KeyCode.Keypad5))
-		//{
-		//	shieldOn.enabled = false;
-		//	anim.Play("player_shield_idle");	
-        //}
-		//if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Keypad5) && Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.Keypad5))
-		//{
-		//	shieldOn.enabled = false;
-		//	anim.Play("player_shield_idle");
-		//}
-		//if (Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.Keypad5) && Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKey(KeyCode.D))
-		//{
-		//	GetComponent<CircleCollider2D>().enabled = false;
-		//	anim.Play("player_shield_idle");
-		//}
     }
 	
 	IEnumerator ShieldOn()

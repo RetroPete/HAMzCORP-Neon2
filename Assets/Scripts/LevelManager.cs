@@ -8,14 +8,11 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
 	public float waitToRespawn;
-	
 	public int scoreCount;
-	
 	public bool respawnCoActive;
-	
 	public PlayerController player;
-	
 	public Text score;
+	public GameObject gameOverUI;
 	
     // Start is called before the first frame update
     void Start()
@@ -35,6 +32,11 @@ public class LevelManager : MonoBehaviour
     {
         
     }
+	
+	public void Die()
+	{
+		gameOverUI.SetActive(true);
+	}
 	
 	public IEnumerator RespawnCo()
 	{

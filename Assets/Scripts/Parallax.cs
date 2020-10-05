@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class Parallax : MonoBehaviour
 {
 	public float parallaxEffect;
-	
 	public GameObject cam;
 	
 	private float length, startpos;

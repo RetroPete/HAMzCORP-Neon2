@@ -9,8 +9,9 @@ public class PlayerEnergy : MonoBehaviour
 {
 	public int maxEnergy = 1000;
 	public int currentEnergy;
-	
 	public EnergyBar energyBar;
+	
+	private LevelManager theLevelManager;
 	
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class PlayerEnergy : MonoBehaviour
         currentEnergy = maxEnergy;
 		
 		energyBar.SetMaxEnergy(maxEnergy);
+		
+		theLevelManager = FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
@@ -48,13 +51,8 @@ public class PlayerEnergy : MonoBehaviour
 		if (currentEnergy <= 0)
 		{
 			currentEnergy = 0;
-			Die();
+			theLevelManager.Die();
 		}	
-	}
-	
-	void Die()
-	{
-		SceneManager.LoadScene("Level_1");
 	}
 	
 	void OnTriggerEnter2D(Collider2D col)

@@ -8,12 +8,10 @@ using UnityEngine.UI;
 public class BeamSpawn : MonoBehaviour
 {
 	public float respawnTime = 15;
-	
 	public GameObject player;
 	public GameObject[] beamPrefabs;
 	
 	private GameObject[] beams;
-	
 	private Vector3 offset;
 	
     // Start is called before the first frame update
