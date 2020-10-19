@@ -28,7 +28,7 @@ public class PlayerShieldController : MonoBehaviour
     {	
 		timer += Time.deltaTime;
 		
-        if (Input.GetKeyDown(KeyCode.Keypad5))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
 			if(timer > waitingTime)
 			{

@@ -7,11 +7,10 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-	public float waitToRespawn;
 	public int scoreCount;
-	public bool respawnCoActive;
 	public PlayerController player;
 	public Text score;
+	public Text finalScore;
 	public GameObject gameOverUI;
 	
     // Start is called before the first frame update
@@ -36,23 +35,14 @@ public class LevelManager : MonoBehaviour
 	public void Die()
 	{
 		gameOverUI.SetActive(true);
-	}
-	
-	public IEnumerator RespawnCo()
-	{
+		
 		player.gameObject.SetActive(false);
-		
-		yield return new WaitForSeconds(waitToRespawn);
-		
-		scoreCount = 0;
-		score.text = "Score: " + scoreCount;
-		
-		player.gameObject.SetActive(true);
 	}
 
 	public void AddScore(int scoreToAdd)
 	{
 		scoreCount += scoreToAdd;
 		score.text = "Score: " + scoreCount;
+		finalScore.text = "Beams Destroyed: " + scoreCount;
 	}
 }

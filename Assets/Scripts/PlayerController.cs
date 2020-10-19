@@ -64,5 +64,7 @@ public class PlayerController : MonoBehaviour
 	void FixedUpdate()
 	{
 		rb.velocity = new Vector2(autoMove + horizontal * boostSpeed, vertical);
+		
+		//player.GetComponent<PlayerEnergy>().TakeEnergy(1);
 	}
 }

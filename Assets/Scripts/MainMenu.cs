@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
 	public void NewGame()
 	{
 		SceneManager.LoadScene("Level_1");
-
+		
 		PlayerPrefs.SetInt("ScoreCount", 0);
 	}
 

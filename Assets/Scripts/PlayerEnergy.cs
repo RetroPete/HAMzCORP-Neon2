@@ -26,6 +26,8 @@ public class PlayerEnergy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		TakeEnergy(0);
+		
 		if (Input.GetKey(KeyCode.D))
 		{
 			TakeEnergy(1);
