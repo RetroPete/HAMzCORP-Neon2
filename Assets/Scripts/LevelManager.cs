@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
 	public int scoreCount;
-	public PlayerController player;
+	public PlayerController playerController;
+	public BeamSpawn beamSpawn;
 	public Text score;
 	public Text finalScore;
 	public GameObject gameOverUI;
@@ -16,7 +17,9 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        playerController = FindObjectOfType<PlayerController>();
+		
+		beamSpawn = FindObjectOfType<BeamSpawn>();
 		
 		if(PlayerPrefs.HasKey("ScoreCount"))
 		{
@@ -34,9 +37,9 @@ public class LevelManager : MonoBehaviour
 	
 	public void Die()
 	{
-		gameOverUI.SetActive(true);
+		playerController.Die();
 		
-		player.gameObject.SetActive(false);
+		StartCoroutine(Death());	
 	}
 
 	public void AddScore(int scoreToAdd)
@@ -44,5 +47,18 @@ public class LevelManager : MonoBehaviour
 		scoreCount += scoreToAdd;
 		score.text = "Score: " + scoreCount;
 		finalScore.text = "Beams Destroyed: " + scoreCount;
+	}
+	
+	IEnumerator Death()
+	{
+		yield return new WaitForSeconds(1.5f);
+		
+		beamSpawn.gameObject.SetActive(false);
+		
+		playerController.gameObject.SetActive(false);
+		
+		yield return new WaitForSeconds(.2f);
+		
+		gameOverUI.SetActive(true);
 	}
 }

@@ -67,4 +67,15 @@ public class PlayerController : MonoBehaviour
 		
 		//player.GetComponent<PlayerEnergy>().TakeEnergy(1);
 	}
+	
+	public void Die()
+	{
+		anim.Play("player_explosion");
+		
+		//gameOverUI.SetActive(true);
+		
+		//player.gameObject.SetActive(false);
+		
+		//beamSpawn.gameObject.SetActive(false);
+	}
 }

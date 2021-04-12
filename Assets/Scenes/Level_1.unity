@@ -6676,6 +6676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2034887691}
   - component: {fileID: 2034887690}
+  - component: {fileID: 2034887692}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -6696,7 +6697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreCount: 0
-  player: {fileID: 843518701}
+  playerController: {fileID: 0}
+  beamSpawn: {fileID: 7930150699799321322}
   score: {fileID: 1132093518}
   finalScore: {fileID: 581941773}
   gameOverUI: {fileID: 1704474723}
@@ -6714,6 +6716,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2034887692
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034887689}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 389894da3aa5984489da621d55be4ce5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2082108371
 GameObject:
   m_ObjectHideFlags: 0
