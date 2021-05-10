@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerEnergy : MonoBehaviour
 {
-	public int maxEnergy = 1000;
+	public int maxEnergy = 10000;
 	public int currentEnergy;
 	public EnergyBar energyBar;
 	
