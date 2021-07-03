@@ -25,9 +25,9 @@ public class BeamController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Destroy(GameObject.Find("drone_fence_blue(Clone)"), destroyTime);
-		Destroy(GameObject.Find("drone_fence_green(Clone)"), destroyTime);		
-		Destroy(GameObject.Find("drone_fence_purple(Clone)"), destroyTime);
-		Destroy(GameObject.Find("drone_fence_red(Clone)"), destroyTime);
+		Destroy(GameObject.Find("drone_blue(Clone)"), destroyTime);
+		Destroy(GameObject.Find("drone_green(Clone)"), destroyTime);		
+		Destroy(GameObject.Find("drone_purple(Clone)"), destroyTime);
+		Destroy(GameObject.Find("drone_red(Clone)"), destroyTime);
     }
 }
