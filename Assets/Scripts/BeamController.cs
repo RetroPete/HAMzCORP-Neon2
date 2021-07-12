@@ -9,6 +9,7 @@ public class BeamController : MonoBehaviour
 {
 	public float speed;
 	public float destroyTime;
+	
 	public GameObject beam;
 	
 	private Rigidbody2D rb;

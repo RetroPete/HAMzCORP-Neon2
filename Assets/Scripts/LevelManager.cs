@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
 	public int scoreCount;
+	
 	public PlayerController playerController;
 	public BeamSpawn beamSpawn;
 	public Text score;

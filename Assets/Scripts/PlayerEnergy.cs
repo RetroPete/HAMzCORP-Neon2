@@ -9,6 +9,7 @@ public class PlayerEnergy : MonoBehaviour
 {
 	public int maxEnergy = 10000;
 	public int currentEnergy;
+	
 	public EnergyBar energyBar;
 	
 	private LevelManager theLevelManager;

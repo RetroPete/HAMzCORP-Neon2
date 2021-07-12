@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float vertical;
 	public float boostSpeed;
 	public float autoMove;
+	
 	public GameObject player;
 	
 	private Rigidbody2D rb;
@@ -32,7 +33,6 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
     void Update()
     {
-		
 		Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         pos.x = Mathf.Clamp01(pos.x);
         pos.y = Mathf.Clamp01(pos.y);
@@ -65,17 +65,11 @@ public class PlayerController : MonoBehaviour
 	{
 		rb.velocity = new Vector2(autoMove + horizontal * boostSpeed, vertical);
 		
-		//player.GetComponent<PlayerEnergy>().TakeEnergy(1);
+		player.GetComponent<PlayerEnergy>().TakeEnergy(1);
 	}
 	
 	public void Die()
 	{
 		anim.Play("player_explosion");
-		
-		//gameOverUI.SetActive(true);
-		
-		//player.gameObject.SetActive(false);
-		
-		//beamSpawn.gameObject.SetActive(false);
 	}
 }

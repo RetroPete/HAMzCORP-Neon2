@@ -7,9 +7,10 @@ using UnityEngine.UI;
 
 public class PlayerShieldController : MonoBehaviour
 {
-	public GameObject player;
 	public float timer = 0;
 	public float waitingTime = 2.2f;
+	
+	public GameObject player;
 	
 	private Animator anim;
 	

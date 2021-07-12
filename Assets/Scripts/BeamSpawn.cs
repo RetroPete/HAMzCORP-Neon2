@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class BeamSpawn : MonoBehaviour
 {
 	public float respawnTime;
+	
 	public GameObject player;
 	public GameObject[] beamPrefabs;
 	

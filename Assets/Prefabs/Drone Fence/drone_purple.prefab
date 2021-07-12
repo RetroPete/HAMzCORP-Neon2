@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 4415517838297787223}
   - component: {fileID: 1869056659790339382}
   - component: {fileID: 6640231247627714843}
-  - component: {fileID: 8211126747153146141}
-  - component: {fileID: 3734324943523810765}
   - component: {fileID: 8529559122296298123}
   - component: {fileID: 7131861062367148287}
   - component: {fileID: 19242674055535762}
+  - component: {fileID: 8211126747153146141}
+  - component: {fileID: 3734324943523810765}
+  - component: {fileID: 6062530767695353165}
   m_Layer: 0
   m_Name: drone_purple
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 5762750906572868988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 72576019771051661}
   m_Father: {fileID: 0}
@@ -108,33 +109,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8211126747153146141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5762750906572868988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a93a55eba7e7fcb4ca9407823ecc5e3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  destroyTime: 6
-  beam: {fileID: 5762750906572868988}
---- !u!114 &3734324943523810765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5762750906572868988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6872cc3ccceb3b41b58df34db7a4117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &8529559122296298123
 Rigidbody2D:
   serializedVersion: 4
@@ -169,7 +143,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.001, y: 0.7}
+  m_Offset: {x: -0.01, y: 0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -208,6 +182,46 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &8211126747153146141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762750906572868988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93a55eba7e7fcb4ca9407823ecc5e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  destroyTime: 6
+  beam: {fileID: 5762750906572868988}
+--- !u!114 &3734324943523810765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762750906572868988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6872cc3ccceb3b41b58df34db7a4117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6062530767695353165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762750906572868988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b988de9fa1edf45acae079dfd8fde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 3
 --- !u!61 &8334124228781718345
 BoxCollider2D:
   m_ObjectHideFlags: 0
