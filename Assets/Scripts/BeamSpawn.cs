@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class BeamSpawn : MonoBehaviour
 {
-	public float respawnTime = 15;
+	public float respawnTime;
 	public GameObject player;
 	public GameObject[] beamPrefabs;
 	
@@ -37,7 +37,7 @@ public class BeamSpawn : MonoBehaviour
         int i = Random.Range (0, beamPrefabs.Length);
         {
 			beams[i] = Instantiate(beamPrefabs[i]) as GameObject;
-			beams[i].transform.position = new Vector3(30 + player.transform.position.x + offset.x, Random.Range(-5,5), offset.z);
+			beams[i].transform.position = new Vector3(50 + player.transform.position.x + offset.x, Random.Range(-5,5), offset.z);
 		}
     }
 	

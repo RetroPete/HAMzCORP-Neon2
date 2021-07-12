@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class BeamController : MonoBehaviour
 {
-	public float speed = 1f;
-	public float destroyTime = 6f;
+	public float speed;
+	public float destroyTime;
 	public GameObject beam;
 	
 	private Rigidbody2D rb;
