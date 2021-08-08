@@ -40,7 +40,7 @@ public class PlayerRollController : MonoBehaviour
 	{
 		yield return new WaitForSeconds(.2f);
 		
-		transform.Translate(new Vector3(0, 1, 0) * rollSpeed);
+		transform.Translate(new Vector2(0, 1) * rollSpeed);
 		
 		player.GetComponent<PlayerEnergy>().TakeEnergy(100);
 		
@@ -51,7 +51,7 @@ public class PlayerRollController : MonoBehaviour
 	{
 		yield return new WaitForSeconds(.2f);
 		
-		transform.Translate(new Vector3(0, -1, 0) * rollSpeed);
+		transform.Translate(new Vector2(0, -1) * rollSpeed);
 		
 		player.GetComponent<PlayerEnergy>().TakeEnergy(100);
 		

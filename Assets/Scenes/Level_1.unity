@@ -2439,7 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  vertical: 0
+  vertical: 1
   boostSpeed: 20
   autoMove: 10
   player: {fileID: 843518700}
@@ -2458,7 +2458,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2603,7 +2603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4454c8afdbb313c42ade50cc8cdb05fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollSpeed: 5
+  rollSpeed: 10
   player: {fileID: 843518700}
 --- !u!1 &850613173
 GameObject:
@@ -7243,6 +7243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Drone Fence
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151168451430708948, guid: 7a2a801eea0c114418cb4b8daa76303d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3151168451430708950, guid: 7a2a801eea0c114418cb4b8daa76303d,
         type: 3}

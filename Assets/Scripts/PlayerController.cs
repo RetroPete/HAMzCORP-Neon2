@@ -42,17 +42,17 @@ public class PlayerController : MonoBehaviour
 		
 		if (Input.GetKey(KeyCode.W))
 		{
-			transform.Translate(new Vector3(0, .5f, 0) * autoMove * Time.deltaTime);
+			transform.Translate(new Vector2(0, vertical) * autoMove * Time.deltaTime);
 		}
 		
 		if (Input.GetKey(KeyCode.S))
 		{
-			transform.Translate(new Vector3(0, -.5f, 0) * autoMove * Time.deltaTime);
+			transform.Translate(new Vector2(0, -vertical) * autoMove * Time.deltaTime);
 		}
 		
 		if (Input.GetKeyDown(KeyCode.D))
         {
-			horizontal = 1;
+			horizontal = boostSpeed;
         }
 		
 		if (Input.GetKeyUp(KeyCode.D))
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 	
 	void FixedUpdate()
 	{
-		rb.velocity = new Vector2(autoMove + horizontal * boostSpeed, vertical);
+		rb.velocity = new Vector2(autoMove + horizontal, 0);
 		
 		player.GetComponent<PlayerEnergy>().TakeEnergy(1);
 	}
