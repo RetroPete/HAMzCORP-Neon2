@@ -20,7 +20,6 @@ public class BeamSpawn : MonoBehaviour
     {
         offset = transform.position - player.transform.position;
         StartCoroutine(beamWave());
-		
     }
 	
 	// Update is called once per frame

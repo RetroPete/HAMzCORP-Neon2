@@ -2418,7 +2418,6 @@ GameObject:
   - component: {fileID: 843518705}
   - component: {fileID: 843518701}
   - component: {fileID: 843518707}
-  - component: {fileID: 843518708}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2591,20 +2590,6 @@ MonoBehaviour:
   maxEnergy: 10000
   currentEnergy: 0
   energyBar: {fileID: 907917549}
---- !u!114 &843518708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843518700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4454c8afdbb313c42ade50cc8cdb05fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rollSpeed: 10
-  player: {fileID: 843518700}
 --- !u!1 &850613173
 GameObject:
   m_ObjectHideFlags: 0
@@ -3737,8 +3722,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201893666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 2, z: 1}
+  m_LocalPosition: {x: -0.3, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 843518704}
   m_RootOrder: 1
@@ -3807,10 +3792,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.92, y: 1.92}
+  m_Size: {x: 3.25, y: 3.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &1201893671
@@ -6089,7 +6074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1962013188
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6519,7 +6504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033533827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.344, y: 0.138, z: 0}
+  m_LocalPosition: {x: -2, y: 0.15, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 843518704}
@@ -6589,7 +6574,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.85, y: 0.8}
+  m_Size: {x: 0.5, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -6641,7 +6626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreCount: 0
-  playerController: {fileID: 0}
+  playerController: {fileID: 843518701}
   beamSpawn: {fileID: 7930150699799321322}
   score: {fileID: 1132093518}
   finalScore: {fileID: 581941773}
@@ -7247,7 +7232,7 @@ PrefabInstance:
     - target: {fileID: 3151168451430708948, guid: 7a2a801eea0c114418cb4b8daa76303d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3151168451430708950, guid: 7a2a801eea0c114418cb4b8daa76303d,
         type: 3}

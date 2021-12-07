@@ -13,7 +13,6 @@ public class BeamEnergy : MonoBehaviour
     void Start()
     {
         theLevelManager = FindObjectOfType<LevelManager>();
-		
     }
 
     // Update is called once per frame

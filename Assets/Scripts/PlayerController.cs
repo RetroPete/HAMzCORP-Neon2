@@ -59,6 +59,32 @@ public class PlayerController : MonoBehaviour
 		{
 			horizontal = 0;
         }
+		
+		if (Input.GetKey(KeyCode.Q))
+		{
+			if(Input.GetKeyDown(KeyCode.W))
+			{
+				  vertical = 3;
+				  
+				  player.GetComponent<PlayerEnergy>().TakeEnergy(500);
+				  
+				  anim.Play("player_roll_up"); 
+			}
+			
+			if(Input.GetKeyDown(KeyCode.S))
+            {
+				  vertical = 3;
+				  
+				  player.GetComponent<PlayerEnergy>().TakeEnergy(500);
+				  
+				  anim.Play("player_roll_down"); 
+            }
+		}
+		
+		if (Input.GetKeyUp(KeyCode.Q))
+		{
+			vertical = 1;
+		}
     }
 	
 	void FixedUpdate()
