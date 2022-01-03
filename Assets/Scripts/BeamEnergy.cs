@@ -36,8 +36,11 @@ public class BeamEnergy : MonoBehaviour
 	void Destroy()
 	{
 		Destroy(GameObject.Find("blue_beam"));
+		
 		Destroy(GameObject.Find("green_beam"));
+		
 		Destroy(GameObject.Find("purple_beam"));
+		
 		Destroy(GameObject.Find("red_beam"));
 	}		
 }

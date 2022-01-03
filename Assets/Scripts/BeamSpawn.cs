@@ -26,7 +26,9 @@ public class BeamSpawn : MonoBehaviour
     void Update()
     {	
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+		
         pos.y = Mathf.Clamp01(pos.y);
+		
         transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
 
@@ -37,6 +39,7 @@ public class BeamSpawn : MonoBehaviour
         int i = Random.Range (0, beamPrefabs.Length);
         {
 			beams[i] = Instantiate(beamPrefabs[i]) as GameObject;
+			
 			beams[i].transform.position = new Vector3(50 + player.transform.position.x + offset.x, Random.Range(-5,5), offset.z);
 		}
     }
@@ -46,6 +49,7 @@ public class BeamSpawn : MonoBehaviour
         while(true)
 		{
             yield return new WaitForSeconds(respawnTime);
+			
             spawnBeam();
         }
     }

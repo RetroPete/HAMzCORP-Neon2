@@ -19,7 +19,9 @@ public class BeamController : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+		
         rb.velocity = new Vector2(-speed, 0);
+		
         screenBounds = Camera.main.ScreenToViewportPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
 
@@ -27,8 +29,11 @@ public class BeamController : MonoBehaviour
     void Update()
     {
 		Destroy(GameObject.Find("drone_blue(Clone)"), destroyTime);
-		Destroy(GameObject.Find("drone_green(Clone)"), destroyTime);		
+		
+		Destroy(GameObject.Find("drone_green(Clone)"), destroyTime);
+		
 		Destroy(GameObject.Find("drone_purple(Clone)"), destroyTime);
+		
 		Destroy(GameObject.Find("drone_red(Clone)"), destroyTime);
     }
 }

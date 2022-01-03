@@ -46,7 +46,9 @@ public class LevelManager : MonoBehaviour
 	public void AddScore(int scoreToAdd)
 	{
 		scoreCount += scoreToAdd;
+		
 		score.text = "Score: " + scoreCount;
+		
 		finalScore.text = "Beams Destroyed: " + scoreCount;
 	}
 	

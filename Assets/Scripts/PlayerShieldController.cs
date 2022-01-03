@@ -29,17 +29,35 @@ public class PlayerShieldController : MonoBehaviour
     {	
 		timer += Time.deltaTime;
 		
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.J))
         {
 			if(timer > waitingTime)
 			{
 			  timer = 0;
-			  StartCoroutine(ShieldOn());
+			  StartCoroutine(ShieldOnBlue());
+			}
+        }
+		
+		if (Input.GetKeyDown(KeyCode.K))
+        {
+			if(timer > waitingTime)
+			{
+			  timer = 0;
+			  StartCoroutine(ShieldOnGreen());
+			}
+        }
+		
+		if (Input.GetKeyDown(KeyCode.L))
+        {
+			if(timer > waitingTime)
+			{
+			  timer = 0;
+			  StartCoroutine(ShieldOnPurple());
 			}
         }
     }
 	
-	IEnumerator ShieldOn()
+	IEnumerator ShieldOnBlue()
 	{
 		yield return new WaitForSeconds(.1f);
 		
@@ -47,7 +65,45 @@ public class PlayerShieldController : MonoBehaviour
 		
 		GetComponent<CircleCollider2D>().enabled = true;
 		
-		anim.Play("player_shield_active");
+		anim.Play("player_shield_blue");
+		
+		yield return new WaitForSeconds(2f);
+		
+		GetComponent<CircleCollider2D>().enabled = false;
+		
+		anim.Play("player_shield_idle");
+		
+		yield return new WaitForSeconds(.1f);
+	}
+	
+	IEnumerator ShieldOnGreen()
+	{
+		yield return new WaitForSeconds(.1f);
+		
+		player.GetComponent<PlayerEnergy>().TakeEnergy(50);
+		
+		GetComponent<CircleCollider2D>().enabled = true;
+		
+		anim.Play("player_shield_green");
+		
+		yield return new WaitForSeconds(2f);
+		
+		GetComponent<CircleCollider2D>().enabled = false;
+		
+		anim.Play("player_shield_idle");
+		
+		yield return new WaitForSeconds(.1f);
+	}
+	
+	IEnumerator ShieldOnPurple()
+	{
+		yield return new WaitForSeconds(.1f);
+		
+		player.GetComponent<PlayerEnergy>().TakeEnergy(50);
+		
+		GetComponent<CircleCollider2D>().enabled = true;
+		
+		anim.Play("player_shield_purple");
 		
 		yield return new WaitForSeconds(2f);
 		
