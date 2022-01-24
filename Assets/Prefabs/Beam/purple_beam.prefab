@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6812131168868902869}
   m_Layer: 0
   m_Name: purple_beam
-  m_TagString: Untagged
+  m_TagString: Beam Purple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

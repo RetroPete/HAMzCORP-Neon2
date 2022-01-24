@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Drone Fence
+  - Beam
+  - Shield
+  - Shield Blue
+  - Shield Green
+  - Sheld Purple
+  - Beam Blue
+  - Beam Green
+  - Beam Purple
+  - Beam Red
+  - Drone Blue
+  - Drone Green
+  - Drone Purple
+  - Drone Red
   layers:
   - Default
   - TransparentFX
