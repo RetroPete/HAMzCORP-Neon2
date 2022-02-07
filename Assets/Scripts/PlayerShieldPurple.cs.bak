@@ -34,7 +34,17 @@ public class PlayerShieldPurple : MonoBehaviour
     {	
 		timer += Time.deltaTime;
 		
-		if (Input.GetKeyDown(KeyCode.L) && !Input.GetKeyDwon(KeyCode.J) && !Input.GetKeyDown(KeyCode.K))
+		if (Input.GetKeyDown(KeyCode.J))
+        {
+			
+        }
+		
+		else if (Input.GetKeyDown(KeyCode.K))
+        {
+			
+        }
+		
+		else if (Input.GetKeyDown(KeyCode.L))
         {
 			if(timer > waitingTime)
 			{

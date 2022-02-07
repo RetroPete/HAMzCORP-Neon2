@@ -34,13 +34,23 @@ public class PlayerShieldGreen : MonoBehaviour
     {	
 		timer += Time.deltaTime;
 		
-		if (Input.GetKeyDown(KeyCode.K) && !Input.GetKeyUp(KeyCode.J) && !Input.GetKeyUp(KeyCode.L))
+		if (Input.GetKeyDown(KeyCode.J))
+        {
+			
+        }
+		
+		else if (Input.GetKeyDown(KeyCode.K))
         {
 			if(timer > waitingTime)
 			{
 			  timer = 0;
 			  StartCoroutine(ShieldOnGreen());
 			}
+        }
+		
+		else if (Input.GetKeyDown(KeyCode.L))
+        {
+			
         }
     }
 	

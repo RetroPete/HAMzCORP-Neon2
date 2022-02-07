@@ -38,7 +38,7 @@ public class PlayerShieldController : MonoBehaviour
 			}
         }
 		
-		if (Input.GetKeyDown(KeyCode.K))
+		else if (Input.GetKeyDown(KeyCode.K))
         {
 			if(timer > waitingTime)
 			{
@@ -47,7 +47,7 @@ public class PlayerShieldController : MonoBehaviour
 			}
         }
 		
-		if (Input.GetKeyDown(KeyCode.L))
+		else if (Input.GetKeyDown(KeyCode.L))
         {
 			if(timer > waitingTime)
 			{
