@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.S))
 			{
-				  vertical = 5;
+				  vertical = 4;
 				  
 				  anim.Play("player_roll_down");
 				  
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
 			
 			else if (Input.GetKeyDown(KeyCode.W))
             {
-				  vertical = 5;
+				  vertical = 4;
 				  
 				  anim.Play("player_roll_up");
 				  
