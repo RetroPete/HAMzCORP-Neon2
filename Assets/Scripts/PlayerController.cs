@@ -65,22 +65,22 @@ public class PlayerController : MonoBehaviour
 		
 		if (Input.GetKey(KeyCode.Q))
 		{
-			if(Input.GetKeyDown(KeyCode.W))
+			if (Input.GetKeyDown(KeyCode.S))
 			{
-				  vertical = 3;
+				  vertical = 5;
 				  
-				  player.GetComponent<PlayerEnergy>().TakeEnergy(500);
+				  anim.Play("player_roll_down");
 				  
-				  anim.Play("player_roll_up"); 
+				  player.GetComponent<PlayerEnergy>().TakeEnergy(250); 
 			}
 			
-			if(Input.GetKeyDown(KeyCode.S))
+			else if (Input.GetKeyDown(KeyCode.W))
             {
-				  vertical = 3;
+				  vertical = 5;
 				  
-				  player.GetComponent<PlayerEnergy>().TakeEnergy(500);
+				  anim.Play("player_roll_up");
 				  
-				  anim.Play("player_roll_down"); 
+				  player.GetComponent<PlayerEnergy>().TakeEnergy(250);
             }
 		}
 		
